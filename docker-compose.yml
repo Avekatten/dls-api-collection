@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  apicollection:
+    image: ${DOCKER_REGISTRY-}apicollection
+    build:
+      context: .\APICollection
+      dockerfile: Dockerfile
