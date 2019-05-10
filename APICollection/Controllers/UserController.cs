@@ -58,9 +58,12 @@ namespace APICollection.Controllers
             using (IDocumentSession session = RavenDocumentStore.Store.OpenSession())  // Open a session for a default 'Database'
             {
                 User user = session.Load<User>("users/" + id + "-A");                               // Load the Product and start tracking
-
-                session.Delete(user);
-
+                
+                //session.Delete(user);
+                user.Username = value.Username;
+                user.Password = value.Password;
+                
+                // session.set(user, username, password);
                 session.SaveChanges();
             }
         }
