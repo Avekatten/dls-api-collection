@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.28307.572
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APICollection", "APICollection\APICollection.csproj", "{1AAAF071-EECF-470E-9642-45231B2BD961}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserAPI_DLS", "APICollection\UserAPI_DLS.csproj", "{1AAAF071-EECF-470E-9642-45231B2BD961}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeaderboardAPI_DLS", "LeaderboardAPI_DLS\LeaderboardAPI_DLS.csproj", "{D5CC94EC-5945-4536-8AC2-AD11A2C895BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{1AAAF071-EECF-470E-9642-45231B2BD961}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AAAF071-EECF-470E-9642-45231B2BD961}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AAAF071-EECF-470E-9642-45231B2BD961}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5CC94EC-5945-4536-8AC2-AD11A2C895BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5CC94EC-5945-4536-8AC2-AD11A2C895BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5CC94EC-5945-4536-8AC2-AD11A2C895BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5CC94EC-5945-4536-8AC2-AD11A2C895BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
