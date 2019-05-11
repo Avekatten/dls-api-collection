@@ -41,15 +41,19 @@ namespace APICollection.Controllers
         }
 
         // POST: api/User
-        public void Post([FromBody]User value)
+        public bool Post([FromBody]User value)
         {
             using (IDocumentSession session = RavenDocumentStore.Store.OpenSession())  // Open a session for a default 'Database'
             {
 
                 session.Store(value);    
                 
-                session.SaveChanges();                             
+                session.SaveChanges();     
+                
+                // Needs check for valid credentials/data
             }
+
+            return true;
         }
 
         // PUT: api/User/5
