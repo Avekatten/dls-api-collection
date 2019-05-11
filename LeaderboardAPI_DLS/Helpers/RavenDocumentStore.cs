@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 
 
-namespace APICollection.Helpers
+namespace LeaderboardAPI_DLS.Helpers
 {
     public class RavenDocumentStore
     {
