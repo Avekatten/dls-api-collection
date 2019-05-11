@@ -38,7 +38,7 @@ namespace LeaderboardAPI_DLS.Controllers
                 //
             }
             //List<Score> sortedTopTen = leaderboard.Scores.Sort(Score.;
-            List<Score> temp = leaderboard.Scores.OrderBy(o => o.HighScore).ToList();
+            List<Score> temp = leaderboard.Scores.OrderByDescending(o => o.HighScore).ToList();
 
             return temp.GetRange(0, leaderboard.Scores.Count).ToArray();
             

@@ -3,6 +3,7 @@ using APICollection.Models;
 using Raven.Client.Documents.Session;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web.Http;
 
 namespace APICollection.Controllers
@@ -11,13 +12,15 @@ namespace APICollection.Controllers
     public class UserController : ApiController
     {
         // GET: api/User
-        public User Get()
+        public List<User> Get()
         {
             using (IDocumentSession session = RavenDocumentStore.Store.OpenSession())  // Open a session for a default 'Database'
             {
-                User user = session.Load<User>("1");                               // Load the Product and start tracking
-                session.SaveChanges();
-                return user;
+                List<User> users = session
+                .Query<User>()
+                .ToList();
+      
+                return users;
             }
         }
 
@@ -41,8 +44,14 @@ namespace APICollection.Controllers
             using (IDocumentSession session = RavenDocumentStore.Store.OpenSession())  // Open a session for a default 'Database'
             {
 
-                session.Store(value);    
+                session.Store(value);
+
                 
+                value.UserID = session.Advanced.GetDocumentId(value);
+
+                value.UserID = Regex.Replace(value.UserID, "[^.0-9]", "");
+
+
                 session.SaveChanges();     
                 
                 // Needs check for valid credentials/data
@@ -64,6 +73,7 @@ namespace APICollection.Controllers
                 user.Password = value.Password;
                 user.UserMail = value.UserMail;
                 user.OwnedGames = value.OwnedGames;
+    
                 
                 // session.set(user, username, password);
                 session.SaveChanges();

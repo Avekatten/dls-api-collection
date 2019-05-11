@@ -7,6 +7,7 @@ namespace APICollection.Models
 {
     public class User
     {
+        public string UserID   { get; set; }
         public string Username { get; set; }
         public string UserMail { get; set; }
         public string Password { get; set; }
