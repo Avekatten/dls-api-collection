@@ -18,8 +18,9 @@ namespace LeaderboardAPI_DLS.Controllers
             return new string[] { "value1", "value2" };
         }
 
+        // Get all scores within a game
         // GET: api/Leaderboard/5
-        public string Get(string id)
+        public Score[] Get(string id) // Changed return type from string to an array of scores.
         {
             Leaderboard leaderboard = new Leaderboard();
 
@@ -37,9 +38,33 @@ namespace LeaderboardAPI_DLS.Controllers
             }
             //List<Score> sortedTopTen = leaderboard.Scores.Sort(Score.;
             leaderboard.Scores.OrderBy(o => o.HighScore).ToList();
+
+            return leaderboard.Scores.GetRange(0, leaderboard.Scores.Count).ToArray();
             
-            return leaderboard.Scores.GetRange(0, 10).ToString();
-            
+        }
+
+        // Get players specific score
+        // GET: api/Leaderboard/5
+        [HttpGet]
+        [Route("{gameID}/{id}")]
+        public Score GetPlayerScore(string gameID, string id) // Changed return type from string to an array of scores.
+        {
+            using (IDocumentSession session = RavenDocumentStore.Store.OpenSession())  // Open a session for a default 'Database'
+            {
+                List<Score> gameScore = session
+                    .Query<Score>()
+                    .Where(x => x.GameID.Equals(gameID) && x.UserID.Equals(id))
+                    .ToList();                               // Load the Product and start tracking
+
+                if (gameScore.Count > 0)
+                    return gameScore[0];
+                else
+                    return null;
+            }
+            //List<Score> sortedTopTen = leaderboard.Scores.Sort(Score.;
+
+
+
         }
 
         // POST: api/Leaderboard
