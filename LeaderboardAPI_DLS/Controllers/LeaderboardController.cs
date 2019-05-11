@@ -1,4 +1,4 @@
-﻿using APICollection.Helpers;
+﻿using LeaderboardAPI_DLS.Helpers;
 using LeaderboardAPI_DLS.Models;
 using Raven.Client.Documents.Session;
 using System;
@@ -13,9 +13,9 @@ namespace LeaderboardAPI_DLS.Controllers
     public class LeaderboardController : ApiController
     {
         // GET: api/Leaderboard
-        public IEnumerable<string> Get()
+        public Score[] Get()
         {
-            return new string[] { "value1", "value2" };
+            return null;
         }
 
         // Get all scores within a game
@@ -73,13 +73,15 @@ namespace LeaderboardAPI_DLS.Controllers
         }
 
         // PUT: api/Leaderboard/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(string gameID, string userID, [FromBody]float newScore)
         {
-        }
-
-        // DELETE: api/Leaderboard/5
-        public void Delete(int id)
-        {
+            using (IDocumentSession session = RavenDocumentStore.Store.OpenSession())  // Open a session for a default 'Database'
+            {
+                Score gameScore = (Score) session
+                    .Query<Score>()
+                    .Where(x => x.UserID.Equals(userID) && x.GameID.Equals(gameID));                               
+                gameScore.HighScore = newScore;
+            }
         }
     }
 }
