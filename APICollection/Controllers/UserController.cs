@@ -1,9 +1,12 @@
 ﻿using APICollection.Helpers;
 using APICollection.Models;
 using Raven.Client.Documents.Session;
+using Raven.Client.ServerWide;
+using Raven.Client.ServerWide.Operations;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using UserAPI_DLS.Helpers;
 
 namespace APICollection.Controllers
 {
@@ -15,6 +18,7 @@ namespace APICollection.Controllers
         {
             using (IDocumentSession session = RavenDocumentStore.Store.OpenSession())  // Open a session for a default 'Database'
             {
+                EnsureDatabaseExists.DatabaseExists(RavenDocumentStore.Store, "Users");
                 User user = session.Load<User>("1");                               // Load the Product and start tracking
                 session.SaveChanges();
                 return user;
@@ -27,6 +31,7 @@ namespace APICollection.Controllers
         {
             using (IDocumentSession session = RavenDocumentStore.Store.OpenSession())  // Open a session for a default 'Database'
             {
+                EnsureDatabaseExists.DatabaseExists(RavenDocumentStore.Store, "Users");
                 User user = session.Load<User>("users/" + id + "-A");                               // Load the Product and start tracking
 
                 session.SaveChanges();
@@ -40,11 +45,9 @@ namespace APICollection.Controllers
         {
             using (IDocumentSession session = RavenDocumentStore.Store.OpenSession())  // Open a session for a default 'Database'
             {
-
-                session.Store(value);    
-                
-                session.SaveChanges();     
-                
+                EnsureDatabaseExists.DatabaseExists(RavenDocumentStore.Store, "Users");
+                session.Store(value);
+                session.SaveChanges();
                 // Needs check for valid credentials/data
             }
 
@@ -57,6 +60,7 @@ namespace APICollection.Controllers
         {
             using (IDocumentSession session = RavenDocumentStore.Store.OpenSession())  // Open a session for a default 'Database'
             {
+                EnsureDatabaseExists.DatabaseExists(RavenDocumentStore.Store, "Users");
                 User user = session.Load<User>("users/" + id + "-A");                               // Load the Product and start tracking
                 
                 //session.Delete(user);
@@ -76,6 +80,7 @@ namespace APICollection.Controllers
         {
             using (IDocumentSession session = RavenDocumentStore.Store.OpenSession())  // Open a session for a default 'Database'
             {
+                EnsureDatabaseExists.DatabaseExists(RavenDocumentStore.Store, "Users");
                 User user = session.Load<User>("users/" + id + "-A");                               // Load the Product and start tracking
 
                 session.Delete(user);
@@ -93,6 +98,7 @@ namespace APICollection.Controllers
         {
             using (IDocumentSession session = RavenDocumentStore.Store.OpenSession())
             {
+                EnsureDatabaseExists.DatabaseExists(RavenDocumentStore.Store, "Users");
                 List<User> matchingUser = session
                     .Query<User>()                               
                     .Where(x => x.Username.Equals(user.Username) && x.Password.Equals(user.Password))
