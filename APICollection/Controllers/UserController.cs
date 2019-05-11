@@ -16,14 +16,12 @@ namespace APICollection.Controllers
             using (IDocumentSession session = RavenDocumentStore.Store.OpenSession())  // Open a session for a default 'Database'
             {
                 User user = session.Load<User>("1");                               // Load the Product and start tracking
-
-
-
                 session.SaveChanges();
                 return user;
             }
         }
 
+        // Get specific user
         // GET: api/User/5
         public User Get(string id)
         {
@@ -31,15 +29,12 @@ namespace APICollection.Controllers
             {
                 User user = session.Load<User>("users/" + id + "-A");                               // Load the Product and start tracking
 
-               
-
                 session.SaveChanges();
                 return user;
-            }
-            
-            
+            }     
         }
 
+        // Creates a new user
         // POST: api/User
         public void Post([FromBody]User value)
         {
@@ -52,6 +47,7 @@ namespace APICollection.Controllers
             }
         }
 
+        // Updates a user with a given id
         // PUT: api/User/5
         public void Put(int id, [FromBody]User value)
         {
@@ -68,6 +64,7 @@ namespace APICollection.Controllers
             }
         }
 
+        // Deletes a user with a given id
         // DELETE: api/User/5
         public void Delete(int id)
         {
@@ -81,6 +78,9 @@ namespace APICollection.Controllers
             }
         }
 
+
+
+        // Queries for the username and password in the DB, returns true/false
         [HttpPost]
         [Route("Login")]
         public bool Login([FromBody]User user)
