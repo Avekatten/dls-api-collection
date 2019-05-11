@@ -1,4 +1,4 @@
-﻿using APICollection.Helpers;
+﻿using LeaderboardAPI_DLS.Helpers;
 using LeaderboardAPI_DLS.Models;
 using Raven.Client.Documents.Session;
 using System;
@@ -10,6 +10,7 @@ using System.Web.Http;
 
 namespace LeaderboardAPI_DLS.Controllers
 {
+    [RoutePrefix("api/Leaderboard")]
     public class LeaderboardController : ApiController
     {
         // GET: api/Leaderboard
@@ -37,10 +38,10 @@ namespace LeaderboardAPI_DLS.Controllers
                 //
             }
             //List<Score> sortedTopTen = leaderboard.Scores.Sort(Score.;
-            leaderboard.Scores.OrderBy(o => o.HighScore).ToList();
+            leaderboard = leaderboard.Scores.OrderBy(o => o.HighScore).ToList();
 
             return leaderboard.Scores.GetRange(0, leaderboard.Scores.Count).ToArray();
-            
+
         }
 
         // Get players specific score
@@ -67,9 +68,20 @@ namespace LeaderboardAPI_DLS.Controllers
 
         }
 
+        [HttpPost]
+        [Route("")]
         // POST: api/Leaderboard
-        public void Post([FromBody]string value)
+        public void Post([FromBody]Score value)
         {
+            using (IDocumentSession session = RavenDocumentStore.Store.OpenSession())  // Open a session for a default 'Database'
+            {
+
+                session.Store(value);
+
+                session.SaveChanges();
+
+                // Needs check for valid credentials/data
+            }
         }
 
         // PUT: api/Leaderboard/5
