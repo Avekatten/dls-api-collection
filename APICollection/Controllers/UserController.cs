@@ -62,6 +62,8 @@ namespace APICollection.Controllers
                 //session.Delete(user);
                 user.Username = value.Username;
                 user.Password = value.Password;
+                user.UserMail = value.UserMail;
+                user.OwnedGames = value.OwnedGames;
                 
                 // session.set(user, username, password);
                 session.SaveChanges();

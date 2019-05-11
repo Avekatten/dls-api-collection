@@ -10,6 +10,7 @@ using System.Web.Http;
 
 namespace LeaderboardAPI_DLS.Controllers
 {
+    [RoutePrefix("api/Leaderboard")]
     public class LeaderboardController : ApiController
     {
         // GET: api/Leaderboard
@@ -67,9 +68,20 @@ namespace LeaderboardAPI_DLS.Controllers
 
         }
 
+        [HttpPost]
+        [Route("")]
         // POST: api/Leaderboard
-        public void Post([FromBody]string value)
+        public void Post([FromBody]Score value)
         {
+            using (IDocumentSession session = RavenDocumentStore.Store.OpenSession())  // Open a session for a default 'Database'
+            {
+
+                session.Store(value);
+
+                session.SaveChanges();
+
+                // Needs check for valid credentials/data
+            }
         }
 
         // PUT: api/Leaderboard/5
