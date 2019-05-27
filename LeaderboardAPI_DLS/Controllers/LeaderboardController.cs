@@ -14,9 +14,9 @@ namespace LeaderboardAPI_DLS.Controllers
     public class LeaderboardController : ApiController
     {
         // GET: api/Leaderboard
-        public IEnumerable<string> Get()
+        public Score[] Get()
         {
-            return new string[] { "value1", "value2" };
+            return null;
         }
 
         // Get all scores within a game
@@ -27,6 +27,7 @@ namespace LeaderboardAPI_DLS.Controllers
 
             using (IDocumentSession session = RavenDocumentStore.Store.OpenSession())  // Open a session for a default 'Database'
             {
+                EnsureDatabaseExists.DatabaseExists(RavenDocumentStore.Store, "Scores");
                 List<Score> gameScores = session
                     .Query<Score>()
                     .Where(x => x.GameID.Equals(id))
@@ -52,6 +53,7 @@ namespace LeaderboardAPI_DLS.Controllers
         {
             using (IDocumentSession session = RavenDocumentStore.Store.OpenSession())  // Open a session for a default 'Database'
             {
+                EnsureDatabaseExists.DatabaseExists(RavenDocumentStore.Store, "Scores");
                 List<Score> gameScore = session
                     .Query<Score>()
                     .Where(x => x.GameID.Equals(gameID) && x.UserID.Equals(id))
@@ -75,7 +77,7 @@ namespace LeaderboardAPI_DLS.Controllers
         {
             using (IDocumentSession session = RavenDocumentStore.Store.OpenSession())  // Open a session for a default 'Database'
             {
-
+                EnsureDatabaseExists.DatabaseExists(RavenDocumentStore.Store, "Scores");
                 session.Store(value);
 
                 session.SaveChanges();
@@ -85,13 +87,16 @@ namespace LeaderboardAPI_DLS.Controllers
         }
 
         // PUT: api/Leaderboard/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(string gameID, string userID, [FromBody]float newScore)
         {
-        }
-
-        // DELETE: api/Leaderboard/5
-        public void Delete(int id)
-        {
+            using (IDocumentSession session = RavenDocumentStore.Store.OpenSession())  // Open a session for a default 'Database'
+            {
+                EnsureDatabaseExists.DatabaseExists(RavenDocumentStore.Store, "Scores");
+                Score gameScore = (Score) session
+                    .Query<Score>()
+                    .Where(x => x.UserID.Equals(userID) && x.GameID.Equals(gameID));                               
+                gameScore.HighScore = newScore;
+            }
         }
     }
 }
