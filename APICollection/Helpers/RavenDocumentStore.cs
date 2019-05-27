@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Configuration;
+
 
 
 namespace APICollection.Helpers
@@ -14,11 +16,14 @@ namespace APICollection.Helpers
 
         public static IDocumentStore Store => store.Value;
 
+        
+
         private static IDocumentStore CreateStore()
         {
+            string ravenDBIP = ConfigurationManager.AppSettings["RavenDBEndPoint"];
             IDocumentStore store = new DocumentStore()
             {
-                Urls = new[] { "http://127.0.0.1:8080" },
+                Urls = new[] { ravenDBIP },
                 Database = "Users"
             }.Initialize();
             

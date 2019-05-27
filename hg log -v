@@ -1,0 +1,387 @@
+[33mcommit 20a77fad7de449aa0b926bfa83612a5d94c55ca0[m
+Author: Avekatten <Andreaslyksen@gmail.com>
+Date:   Sat May 11 16:28:28 2019 +0200
+
+    added the get for /api/users
+
+:100644 100644 69652ce... 3da626a... M	APICollection/Controllers/UserController.cs
+:100644 100644 6d2a2cf... 46a4a6c... M	APICollection/Models/User.cs
+:100644 100644 a17ed41... b3da320... M	LeaderboardAPI_DLS/Controllers/LeaderboardController.cs
+
+[33mcommit 933c73f203a74ec68e081635344ad6006da3feca[m
+Author: Avekatten <Andreaslyksen@gmail.com>
+Date:   Sat May 11 15:45:52 2019 +0200
+
+    Made corrections to some routing
+
+:100644 100644 678387f... 69652ce... M	APICollection/Controllers/UserController.cs
+:100644 100644 e3c3dd6... 6d2a2cf... M	APICollection/Models/User.cs
+:100644 100644 b7d0f7c... 35e398f... M	APICollection/Web.config
+:100644 100644 65dbd92... 4becd09... M	LeaderboardAPI_DLS/Controllers/LeaderboardController.cs
+:100644 100644 687200a... 2aa8799... M	LeaderboardAPI_DLS/Web.config
+
+[33mcommit be29fd21f29ca921bbdfb33123b7b527a838398c[m
+Author: Martin <martjohannsen@gmail.com>
+Date:   Sat May 11 15:42:57 2019 +0200
+
+    - Changed the return of the getLeaderboard()
+
+:100644 100644 65dbd92... e13b7b8... M	LeaderboardAPI_DLS/Controllers/LeaderboardController.cs
+
+[33mcommit dac4945733a1c569f17b24c796cbb79e027fd30d[m
+Author: Avekatten <Andreaslyksen@gmail.com>
+Date:   Sat May 11 14:19:07 2019 +0200
+
+    Small changes (comments, packages etc)
+
+:100644 100644 c837f33... 566fa00... M	APICollection/Controllers/UserController.cs
+:100644 100644 1b76dc2... 06d530d... M	APICollection/UserAPI_DLS.csproj
+:100644 100644 62b3a7d... 02b24e4... M	APICollection/packages.config
+:100644 100644 3051328... 6f770b3... M	LeaderboardAPI_DLS/Helpers/RavenDocumentStore.cs
+:000000 100644 0000000... 9fd9310... A	LeaderboardAPI_DLS/Scores.B31D14BCB1BF20F7.raven-database-topology
+
+[33mcommit 3b67a2116ecc8a17d899337cdd1aa276b244f620[m
+Author: Martin <martjohannsen@gmail.com>
+Date:   Sat May 11 13:14:50 2019 +0200
+
+    - Added attributes to user
+    - Added get player score
+    - Changes to get topten leaderboard
+    - Possibly more
+
+:100644 100644 c837f33... 91f2932... M	APICollection/Controllers/UserController.cs
+:100644 100644 66cec68... e3c3dd6... M	APICollection/Models/User.cs
+:100644 100644 df14f48... 65dbd92... M	LeaderboardAPI_DLS/Controllers/LeaderboardController.cs
+
+[33mcommit 2f3f234769f9a413d9f01a56d104b93631f82765[m
+Author: Martin <martjohannsen@gmail.com>
+Date:   Fri May 10 19:03:58 2019 +0200
+
+    - Added get method for a leaderboard
+
+:100644 100644 ab47a34... 3f3714b... M	APICollection.sln
+:100644 100644 1b76dc2... 1b76dc2... R100	APICollection/APICollection.csproj	APICollection/UserAPI_DLS.csproj
+:000000 100644 0000000... 342449f... A	LeaderboardAPI_DLS/App_Start/BundleConfig.cs
+:000000 100644 0000000... 4b6628b... A	LeaderboardAPI_DLS/App_Start/FilterConfig.cs
+:000000 100644 0000000... 76f46af... A	LeaderboardAPI_DLS/App_Start/RouteConfig.cs
+:000000 100644 0000000... d3371d9... A	LeaderboardAPI_DLS/App_Start/WebApiConfig.cs
+:000000 100644 0000000... 2e0a49a... A	LeaderboardAPI_DLS/ApplicationInsights.config
+:000000 100644 0000000... bfae324... A	LeaderboardAPI_DLS/Areas/HelpPage/ApiDescriptionExtensions.cs
+:000000 100644 0000000... ae10b42... A	LeaderboardAPI_DLS/Areas/HelpPage/App_Start/HelpPageConfig.cs
+:000000 100644 0000000... 10bc2e8... A	LeaderboardAPI_DLS/Areas/HelpPage/Controllers/HelpController.cs
+:000000 100644 0000000... aff2230... A	LeaderboardAPI_DLS/Areas/HelpPage/HelpPage.css
+:000000 100644 0000000... 0c5d26e... A	LeaderboardAPI_DLS/Areas/HelpPage/HelpPageAreaRegistration.cs
+:000000 100644 0000000... 53e593f... A	LeaderboardAPI_DLS/Areas/HelpPage/HelpPageConfigurationExtensions.cs
+:000000 100644 0000000... b7b3b91... A	LeaderboardAPI_DLS/Areas/HelpPage/ModelDescriptions/CollectionModelDescription.cs
+:000000 100644 0000000... e56f48b... A	LeaderboardAPI_DLS/Areas/HelpPage/ModelDescriptions/ComplexTypeModelDescription.cs
+:000000 100644 0000000... 1ced839... A	LeaderboardAPI_DLS/Areas/HelpPage/ModelDescriptions/DictionaryModelDescription.cs
+:000000 100644 0000000... 7e4ff19... A	LeaderboardAPI_DLS/Areas/HelpPage/ModelDescriptions/EnumTypeModelDescription.cs
+:000000 100644 0000000... 7bb5d52... A	LeaderboardAPI_DLS/Areas/HelpPage/ModelDescriptions/EnumValueDescription.cs
+:000000 100644 0000000... d93be74... A	LeaderboardAPI_DLS/Areas/HelpPage/ModelDescriptions/IModelDocumentationProvider.cs
+:000000 100644 0000000... 0e99bc8... A	LeaderboardAPI_DLS/Areas/HelpPage/ModelDescriptions/KeyValuePairModelDescription.cs
+:000000 100644 0000000... 4c849b8... A	LeaderboardAPI_DLS/Areas/HelpPage/ModelDescriptions/ModelDescription.cs
+:000000 100644 0000000... ef963f8... A	LeaderboardAPI_DLS/Areas/HelpPage/ModelDescriptions/ModelDescriptionGenerator.cs
+:000000 100644 0000000... f993556... A	LeaderboardAPI_DLS/Areas/HelpPage/ModelDescriptions/ModelNameAttribute.cs
+:000000 100644 0000000... 357d98a... A	LeaderboardAPI_DLS/Areas/HelpPage/ModelDescriptions/ModelNameHelper.cs
+:000000 100644 0000000... 6e0e209... A	LeaderboardAPI_DLS/Areas/HelpPage/ModelDescriptions/ParameterAnnotation.cs
+:000000 100644 0000000... e010f7a... A	LeaderboardAPI_DLS/Areas/HelpPage/ModelDescriptions/ParameterDescription.cs
+:000000 100644 0000000... c4433e4... A	LeaderboardAPI_DLS/Areas/HelpPage/ModelDescriptions/SimpleTypeModelDescription.cs
+:000000 100644 0000000... 007b818... A	LeaderboardAPI_DLS/Areas/HelpPage/Models/HelpPageApiModel.cs
+:000000 100644 0000000... 1ea630b... A	LeaderboardAPI_DLS/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs
+:000000 100644 0000000... 1a933ed... A	LeaderboardAPI_DLS/Areas/HelpPage/SampleGeneration/HelpPageSampleKey.cs
+:000000 100644 0000000... 8ac37c6... A	LeaderboardAPI_DLS/Areas/HelpPage/SampleGeneration/ImageSample.cs
+:000000 100644 0000000... 3f036e4... A	LeaderboardAPI_DLS/Areas/HelpPage/SampleGeneration/InvalidSample.cs
+:000000 100644 0000000... fb0798b... A	LeaderboardAPI_DLS/Areas/HelpPage/SampleGeneration/ObjectGenerator.cs
+:000000 100644 0000000... 7df43df... A	LeaderboardAPI_DLS/Areas/HelpPage/SampleGeneration/SampleDirection.cs
+:000000 100644 0000000... 8afddaf... A	LeaderboardAPI_DLS/Areas/HelpPage/SampleGeneration/TextSample.cs
+:000000 100644 0000000... dbec377... A	LeaderboardAPI_DLS/Areas/HelpPage/Views/Help/Api.cshtml
+:000000 100644 0000000... 4240fc6... A	LeaderboardAPI_DLS/Areas/HelpPage/Views/Help/DisplayTemplates/ApiGroup.cshtml
+:000000 100644 0000000... 6bad61a... A	LeaderboardAPI_DLS/Areas/HelpPage/Views/Help/DisplayTemplates/CollectionModelDescription.cshtml
+:000000 100644 0000000... 4e8d8e4... A	LeaderboardAPI_DLS/Areas/HelpPage/Views/Help/DisplayTemplates/ComplexTypeModelDescription.cshtml
+:000000 100644 0000000... 9e86efc... A	LeaderboardAPI_DLS/Areas/HelpPage/Views/Help/DisplayTemplates/DictionaryModelDescription.cshtml
+:000000 100644 0000000... 088a36b... A	LeaderboardAPI_DLS/Areas/HelpPage/Views/Help/DisplayTemplates/EnumTypeModelDescription.cshtml
+:000000 100644 0000000... e1269cf... A	LeaderboardAPI_DLS/Areas/HelpPage/Views/Help/DisplayTemplates/HelpPageApiModel.cshtml
+:000000 100644 0000000... 7ca84ed... A	LeaderboardAPI_DLS/Areas/HelpPage/Views/Help/DisplayTemplates/ImageSample.cshtml
+:000000 100644 0000000... e8486ae... A	LeaderboardAPI_DLS/Areas/HelpPage/Views/Help/DisplayTemplates/InvalidSample.cshtml
+:000000 100644 0000000... 285553c... A	LeaderboardAPI_DLS/Areas/HelpPage/Views/Help/DisplayTemplates/KeyValuePairModelDescription.cshtml
+:000000 100644 0000000... 69bb5ec... A	LeaderboardAPI_DLS/Areas/HelpPage/Views/Help/DisplayTemplates/ModelDescriptionLink.cshtml
+:000000 100644 0000000... 5014b94... A	LeaderboardAPI_DLS/Areas/HelpPage/Views/Help/DisplayTemplates/Parameters.cshtml
+:000000 100644 0000000... c19596f... A	LeaderboardAPI_DLS/Areas/HelpPage/Views/Help/DisplayTemplates/Samples.cshtml
+:000000 100644 0000000... 47bf063... A	LeaderboardAPI_DLS/Areas/HelpPage/Views/Help/DisplayTemplates/SimpleTypeModelDescription.cshtml
+:000000 100644 0000000... e642454... A	LeaderboardAPI_DLS/Areas/HelpPage/Views/Help/DisplayTemplates/TextSample.cshtml
+:000000 100644 0000000... cd58380... A	LeaderboardAPI_DLS/Areas/HelpPage/Views/Help/Index.cshtml
+:000000 100644 0000000... 71e38ea... A	LeaderboardAPI_DLS/Areas/HelpPage/Views/Help/ResourceModel.cshtml
+:000000 100644 0000000... 896c833... A	LeaderboardAPI_DLS/Areas/HelpPage/Views/Shared/_Layout.cshtml
+:000000 100644 0000000... 0971732... A	LeaderboardAPI_DLS/Areas/HelpPage/Views/Web.config
+:000000 100644 0000000... d735b1c... A	LeaderboardAPI_DLS/Areas/HelpPage/Views/_ViewStart.cshtml
+:000000 100644 0000000... 248a549... A	LeaderboardAPI_DLS/Areas/HelpPage/XmlDocumentationProvider.cs
+:000000 100644 0000000... d825a52... A	LeaderboardAPI_DLS/Content/Site.css
+:000000 100644 0000000... 6d6e682... A	LeaderboardAPI_DLS/Content/bootstrap.css
+:000000 100644 0000000... df89a50... A	LeaderboardAPI_DLS/Content/bootstrap.min.css
+:000000 100644 0000000... 1f72fd2... A	LeaderboardAPI_DLS/Controllers/HomeController.cs
+:000000 100644 0000000... df14f48... A	LeaderboardAPI_DLS/Controllers/LeaderboardController.cs
+:000000 100644 0000000... 617ba8c... A	LeaderboardAPI_DLS/Controllers/ValuesController.cs
+:000000 100644 0000000... b71cde7... A	LeaderboardAPI_DLS/Global.asax
+:000000 100644 0000000... b269032... A	LeaderboardAPI_DLS/Global.asax.cs
+:000000 100644 0000000... 3051328... A	LeaderboardAPI_DLS/Helpers/RavenDocumentStore.cs
+:000000 100644 0000000... c9e0fd9... A	LeaderboardAPI_DLS/LeaderboardAPI_DLS.csproj
+:000000 100644 0000000... 1f396aa... A	LeaderboardAPI_DLS/Models/Leaderboard.cs
+:000000 100644 0000000... 236ef31... A	LeaderboardAPI_DLS/Models/Score.cs
+:000000 100644 0000000... e543395... A	LeaderboardAPI_DLS/Properties/AssemblyInfo.cs
+:000000 100644 0000000... 5aa9982... A	LeaderboardAPI_DLS/Scripts/bootstrap.js
+:000000 100644 0000000... 9c96832... A	LeaderboardAPI_DLS/Scripts/bootstrap.min.js
+:000000 100644 0000000... f1d8325... A	LeaderboardAPI_DLS/Scripts/jquery-1.10.2.intellisense.js
+:000000 100644 0000000... d3e121b... A	LeaderboardAPI_DLS/Scripts/jquery-1.10.2.js
+:000000 100644 0000000... 51aa758... A	LeaderboardAPI_DLS/Scripts/jquery-1.10.2.min.js
+:000000 100644 0000000... 4dc4920... A	LeaderboardAPI_DLS/Scripts/jquery-1.10.2.min.map
+:000000 100644 0000000... cbfe1f3... A	LeaderboardAPI_DLS/Scripts/modernizr-2.6.2.js
+:000000 100644 0000000... 378d773... A	LeaderboardAPI_DLS/Scripts/respond.js
+:000000 100644 0000000... a848137... A	LeaderboardAPI_DLS/Scripts/respond.min.js
+:000000 100644 0000000... 9c34513... A	LeaderboardAPI_DLS/Views/Home/Index.cshtml
+:000000 100644 0000000... 4c9a28a... A	LeaderboardAPI_DLS/Views/Shared/Error.cshtml
+:000000 100644 0000000... 7b23b2f... A	LeaderboardAPI_DLS/Views/Shared/_Layout.cshtml
+:000000 100644 0000000... 7e0ec90... A	LeaderboardAPI_DLS/Views/Web.config
+:000000 100644 0000000... 2de6241... A	LeaderboardAPI_DLS/Views/_ViewStart.cshtml
+:000000 100644 0000000... d7712aa... A	LeaderboardAPI_DLS/Web.Debug.config
+:000000 100644 0000000... 28a4d5f... A	LeaderboardAPI_DLS/Web.Release.config
+:000000 100644 0000000... 687200a... A	LeaderboardAPI_DLS/Web.config
+:000000 100644 0000000... a3a7999... A	LeaderboardAPI_DLS/favicon.ico
+:000000 100644 0000000... 87eaa43... A	LeaderboardAPI_DLS/fonts/glyphicons-halflings-regular.eot
+:000000 100644 0000000... 5fee068... A	LeaderboardAPI_DLS/fonts/glyphicons-halflings-regular.svg
+:000000 100644 0000000... be784dc... A	LeaderboardAPI_DLS/fonts/glyphicons-halflings-regular.ttf
+:000000 100644 0000000... 2cc3e48... A	LeaderboardAPI_DLS/fonts/glyphicons-halflings-regular.woff
+:000000 100644 0000000... 76389f9... A	LeaderboardAPI_DLS/packages.config
+:000000 100644 0000000... abfc4c4... A	LibraryAPI_DLS/App_Start/BundleConfig.cs
+:000000 100644 0000000... 925d5e1... A	LibraryAPI_DLS/App_Start/FilterConfig.cs
+:000000 100644 0000000... 3dcfe4d... A	LibraryAPI_DLS/App_Start/RouteConfig.cs
+:000000 100644 0000000... 4c8fd9e... A	LibraryAPI_DLS/App_Start/WebApiConfig.cs
+:000000 100644 0000000... 2e0a49a... A	LibraryAPI_DLS/ApplicationInsights.config
+:000000 100644 0000000... b6821b3... A	LibraryAPI_DLS/Areas/HelpPage/ApiDescriptionExtensions.cs
+:000000 100644 0000000... 9d9c42b... A	LibraryAPI_DLS/Areas/HelpPage/App_Start/HelpPageConfig.cs
+:000000 100644 0000000... da60f7c... A	LibraryAPI_DLS/Areas/HelpPage/Controllers/HelpController.cs
+:000000 100644 0000000... aff2230... A	LibraryAPI_DLS/Areas/HelpPage/HelpPage.css
+:000000 100644 0000000... 7b76a80... A	LibraryAPI_DLS/Areas/HelpPage/HelpPageAreaRegistration.cs
+:000000 100644 0000000... 384a75c... A	LibraryAPI_DLS/Areas/HelpPage/HelpPageConfigurationExtensions.cs
+:000000 100644 0000000... 081faa5... A	LibraryAPI_DLS/Areas/HelpPage/ModelDescriptions/CollectionModelDescription.cs
+:000000 100644 0000000... 63bb02e... A	LibraryAPI_DLS/Areas/HelpPage/ModelDescriptions/ComplexTypeModelDescription.cs
+:000000 100644 0000000... a6f421e... A	LibraryAPI_DLS/Areas/HelpPage/ModelDescriptions/DictionaryModelDescription.cs
+:000000 100644 0000000... 798dbae... A	LibraryAPI_DLS/Areas/HelpPage/ModelDescriptions/EnumTypeModelDescription.cs
+:000000 100644 0000000... 485fb61... A	LibraryAPI_DLS/Areas/HelpPage/ModelDescriptions/EnumValueDescription.cs
+:000000 100644 0000000... fc7ad24... A	LibraryAPI_DLS/Areas/HelpPage/ModelDescriptions/IModelDocumentationProvider.cs
+:000000 100644 0000000... a3dbabf... A	LibraryAPI_DLS/Areas/HelpPage/ModelDescriptions/KeyValuePairModelDescription.cs
+:000000 100644 0000000... ec7f8ac... A	LibraryAPI_DLS/Areas/HelpPage/ModelDescriptions/ModelDescription.cs
+:000000 100644 0000000... 7a57087... A	LibraryAPI_DLS/Areas/HelpPage/ModelDescriptions/ModelDescriptionGenerator.cs
+:000000 100644 0000000... e7baf46... A	LibraryAPI_DLS/Areas/HelpPage/ModelDescriptions/ModelNameAttribute.cs
+:000000 100644 0000000... 86eb4c4... A	LibraryAPI_DLS/Areas/HelpPage/ModelDescriptions/ModelNameHelper.cs
+:000000 100644 0000000... e5451db... A	LibraryAPI_DLS/Areas/HelpPage/ModelDescriptions/ParameterAnnotation.cs
+:000000 100644 0000000... 6e9b4ed... A	LibraryAPI_DLS/Areas/HelpPage/ModelDescriptions/ParameterDescription.cs
+:000000 100644 0000000... 46939cb... A	LibraryAPI_DLS/Areas/HelpPage/ModelDescriptions/SimpleTypeModelDescription.cs
+:000000 100644 0000000... ea57c81... A	LibraryAPI_DLS/Areas/HelpPage/Models/HelpPageApiModel.cs
+:000000 100644 0000000... 31da22a... A	LibraryAPI_DLS/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs
+:000000 100644 0000000... f7994e6... A	LibraryAPI_DLS/Areas/HelpPage/SampleGeneration/HelpPageSampleKey.cs
+:000000 100644 0000000... a6e3510... A	LibraryAPI_DLS/Areas/HelpPage/SampleGeneration/ImageSample.cs
+:000000 100644 0000000... b4b163a... A	LibraryAPI_DLS/Areas/HelpPage/SampleGeneration/InvalidSample.cs
+:000000 100644 0000000... 9edc9b0... A	LibraryAPI_DLS/Areas/HelpPage/SampleGeneration/ObjectGenerator.cs
+:000000 100644 0000000... 5f6639f... A	LibraryAPI_DLS/Areas/HelpPage/SampleGeneration/SampleDirection.cs
+:000000 100644 0000000... d92dd60... A	LibraryAPI_DLS/Areas/HelpPage/SampleGeneration/TextSample.cs
+:000000 100644 0000000... 72a1c91... A	LibraryAPI_DLS/Areas/HelpPage/Views/Help/Api.cshtml
+:000000 100644 0000000... 20b3521... A	LibraryAPI_DLS/Areas/HelpPage/Views/Help/DisplayTemplates/ApiGroup.cshtml
+:000000 100644 0000000... 25286d0... A	LibraryAPI_DLS/Areas/HelpPage/Views/Help/DisplayTemplates/CollectionModelDescription.cshtml
+:000000 100644 0000000... 3a162a4... A	LibraryAPI_DLS/Areas/HelpPage/Views/Help/DisplayTemplates/ComplexTypeModelDescription.cshtml
+:000000 100644 0000000... d271783... A	LibraryAPI_DLS/Areas/HelpPage/Views/Help/DisplayTemplates/DictionaryModelDescription.cshtml
+:000000 100644 0000000... a0b54d3... A	LibraryAPI_DLS/Areas/HelpPage/Views/Help/DisplayTemplates/EnumTypeModelDescription.cshtml
+:000000 100644 0000000... 49b5f31... A	LibraryAPI_DLS/Areas/HelpPage/Views/Help/DisplayTemplates/HelpPageApiModel.cshtml
+:000000 100644 0000000... 5e748e5... A	LibraryAPI_DLS/Areas/HelpPage/Views/Help/DisplayTemplates/ImageSample.cshtml
+:000000 100644 0000000... d16236d... A	LibraryAPI_DLS/Areas/HelpPage/Views/Help/DisplayTemplates/InvalidSample.cshtml
+:000000 100644 0000000... 935d332... A	LibraryAPI_DLS/Areas/HelpPage/Views/Help/DisplayTemplates/KeyValuePairModelDescription.cshtml
+:000000 100644 0000000... aee71cb... A	LibraryAPI_DLS/Areas/HelpPage/Views/Help/DisplayTemplates/ModelDescriptionLink.cshtml
+:000000 100644 0000000... aaa0ff9... A	LibraryAPI_DLS/Areas/HelpPage/Views/Help/DisplayTemplates/Parameters.cshtml
+:000000 100644 0000000... c19596f... A	LibraryAPI_DLS/Areas/HelpPage/Views/Help/DisplayTemplates/Samples.cshtml
+:000000 100644 0000000... 102ec6f... A	LibraryAPI_DLS/Areas/HelpPage/Views/Help/DisplayTemplates/SimpleTypeModelDescription.cshtml
+:000000 100644 0000000... 44f7cd2... A	LibraryAPI_DLS/Areas/HelpPage/Views/Help/DisplayTemplates/TextSample.cshtml
+:000000 100644 0000000... 53f3464... A	LibraryAPI_DLS/Areas/HelpPage/Views/Help/Index.cshtml
+:000000 100644 0000000... 2bf152a... A	LibraryAPI_DLS/Areas/HelpPage/Views/Help/ResourceModel.cshtml
+:000000 100644 0000000... 896c833... A	LibraryAPI_DLS/Areas/HelpPage/Views/Shared/_Layout.cshtml
+:000000 100644 0000000... 0971732... A	LibraryAPI_DLS/Areas/HelpPage/Views/Web.config
+:000000 100644 0000000... d735b1c... A	LibraryAPI_DLS/Areas/HelpPage/Views/_ViewStart.cshtml
+:000000 100644 0000000... c3ff225... A	LibraryAPI_DLS/Areas/HelpPage/XmlDocumentationProvider.cs
+:000000 100644 0000000... d825a52... A	LibraryAPI_DLS/Content/Site.css
+:000000 100644 0000000... 6d6e682... A	LibraryAPI_DLS/Content/bootstrap.css
+:000000 100644 0000000... df89a50... A	LibraryAPI_DLS/Content/bootstrap.min.css
+:000000 100644 0000000... 0b72a92... A	LibraryAPI_DLS/Controllers/HomeController.cs
+:000000 100644 0000000... a473d1c... A	LibraryAPI_DLS/Controllers/ValuesController.cs
+:000000 100644 0000000... 05591d6... A	LibraryAPI_DLS/Global.asax
+:000000 100644 0000000... 10899d1... A	LibraryAPI_DLS/Global.asax.cs
+:000000 100644 0000000... 3166b52... A	LibraryAPI_DLS/LeaderboardAPI_DLS.csproj
+:000000 100644 0000000... 2d17c06... A	LibraryAPI_DLS/Models/Leaderboard.cs
+:000000 100644 0000000... f336d52... A	LibraryAPI_DLS/Models/Score.cs
+:000000 100644 0000000... 457de8f... A	LibraryAPI_DLS/Properties/AssemblyInfo.cs
+:000000 100644 0000000... 5aa9982... A	LibraryAPI_DLS/Scripts/bootstrap.js
+:000000 100644 0000000... 9c96832... A	LibraryAPI_DLS/Scripts/bootstrap.min.js
+:000000 100644 0000000... f1d8325... A	LibraryAPI_DLS/Scripts/jquery-1.10.2.intellisense.js
+:000000 100644 0000000... d3e121b... A	LibraryAPI_DLS/Scripts/jquery-1.10.2.js
+:000000 100644 0000000... 51aa758... A	LibraryAPI_DLS/Scripts/jquery-1.10.2.min.js
+:000000 100644 0000000... 4dc4920... A	LibraryAPI_DLS/Scripts/jquery-1.10.2.min.map
+:000000 100644 0000000... cbfe1f3... A	LibraryAPI_DLS/Scripts/modernizr-2.6.2.js
+:000000 100644 0000000... 378d773... A	LibraryAPI_DLS/Scripts/respond.js
+:000000 100644 0000000... a848137... A	LibraryAPI_DLS/Scripts/respond.min.js
+:000000 100644 0000000... 9c34513... A	LibraryAPI_DLS/Views/Home/Index.cshtml
+:000000 100644 0000000... 4c9a28a... A	LibraryAPI_DLS/Views/Shared/Error.cshtml
+:000000 100644 0000000... 7b23b2f... A	LibraryAPI_DLS/Views/Shared/_Layout.cshtml
+:000000 100644 0000000... 0996394... A	LibraryAPI_DLS/Views/Web.config
+:000000 100644 0000000... 2de6241... A	LibraryAPI_DLS/Views/_ViewStart.cshtml
+:000000 100644 0000000... d7712aa... A	LibraryAPI_DLS/Web.Debug.config
+:000000 100644 0000000... 28a4d5f... A	LibraryAPI_DLS/Web.Release.config
+:000000 100644 0000000... be0f8cc... A	LibraryAPI_DLS/Web.config
+:000000 100644 0000000... a3a7999... A	LibraryAPI_DLS/favicon.ico
+:000000 100644 0000000... 87eaa43... A	LibraryAPI_DLS/fonts/glyphicons-halflings-regular.eot
+:000000 100644 0000000... 5fee068... A	LibraryAPI_DLS/fonts/glyphicons-halflings-regular.svg
+:000000 100644 0000000... be784dc... A	LibraryAPI_DLS/fonts/glyphicons-halflings-regular.ttf
+:000000 100644 0000000... 2cc3e48... A	LibraryAPI_DLS/fonts/glyphicons-halflings-regular.woff
+:000000 100644 0000000... 6d3bf9e... A	LibraryAPI_DLS/packages.config
+
+[33mcommit 3886c3f6780ee3b143119b0a4cbe130887624b39[m
+Author: Martin <martjohannsen@gmail.com>
+Date:   Fri May 10 17:28:06 2019 +0200
+
+    - changes to the put method
+
+:100644 100644 f240ca9... c837f33... M	APICollection/Controllers/UserController.cs
+
+[33mcommit aea6da8c86bc779c9e6207b2707bcfebd6ee2dee[m
+Author: Avekatten <Andreaslyksen@gmail.com>
+Date:   Fri May 10 17:00:08 2019 +0200
+
+    Created a login method and added some stuff
+
+:100644 100644 5ee701b... f240ca9... M	APICollection/Controllers/UserController.cs
+
+[33mcommit bbde70007562ea203152dc8159eecb65d5b59297[m
+Author: Avekatten <Andreaslyksen@gmail.com>
+Date:   Wed May 8 16:33:34 2019 +0200
+
+    Started with some RavenDB integration
+
+:100644 100644 3767849... ab47a34... M	APICollection.sln
+:100644 100644 27c4473... 1b76dc2... M	APICollection/APICollection.csproj
+:000000 100644 0000000... 5ee701b... A	APICollection/Controllers/UserController.cs
+:000000 100644 0000000... 96e90a2... A	APICollection/Helpers/RavenDocumentStore.cs
+:000000 100644 0000000... 66cec68... A	APICollection/Models/User.cs
+:000000 100644 0000000... 176fa93... A	APICollection/Users.B31D14BCB1BF20F7.raven-database-topology
+:100644 100644 163d2e1... b7d0f7c... M	APICollection/Web.config
+:100644 100644 da04566... 62b3a7d... M	APICollection/packages.config
+
+[33mcommit 0392e76fa3318c280bd8dcf464f87d66aa883e8b[m
+Author: Avekatten <Andreaslyksen@gmail.com>
+Date:   Wed May 8 15:05:35 2019 +0200
+
+    Add project files.
+
+:000000 100644 0000000... 3767849... A	APICollection.sln
+:000000 100644 0000000... 7e297f6... A	APICollection/.dockerignore
+:000000 100644 0000000... 27c4473... A	APICollection/APICollection.csproj
+:000000 100644 0000000... 05b1eff... A	APICollection/App_Start/BundleConfig.cs
+:000000 100644 0000000... 0d8eef3... A	APICollection/App_Start/FilterConfig.cs
+:000000 100644 0000000... 103607d... A	APICollection/App_Start/RouteConfig.cs
+:000000 100644 0000000... 41767e1... A	APICollection/App_Start/WebApiConfig.cs
+:000000 100644 0000000... 904f515... A	APICollection/Areas/HelpPage/ApiDescriptionExtensions.cs
+:000000 100644 0000000... 1b142e8... A	APICollection/Areas/HelpPage/App_Start/HelpPageConfig.cs
+:000000 100644 0000000... 538a7cd... A	APICollection/Areas/HelpPage/Controllers/HelpController.cs
+:000000 100644 0000000... aff2230... A	APICollection/Areas/HelpPage/HelpPage.css
+:000000 100644 0000000... 97c7615... A	APICollection/Areas/HelpPage/HelpPageAreaRegistration.cs
+:000000 100644 0000000... ccbe215... A	APICollection/Areas/HelpPage/HelpPageConfigurationExtensions.cs
+:000000 100644 0000000... 143f16d... A	APICollection/Areas/HelpPage/ModelDescriptions/CollectionModelDescription.cs
+:000000 100644 0000000... 3529f3b... A	APICollection/Areas/HelpPage/ModelDescriptions/ComplexTypeModelDescription.cs
+:000000 100644 0000000... 44f8734... A	APICollection/Areas/HelpPage/ModelDescriptions/DictionaryModelDescription.cs
+:000000 100644 0000000... 66dd802... A	APICollection/Areas/HelpPage/ModelDescriptions/EnumTypeModelDescription.cs
+:000000 100644 0000000... 49fd0bb... A	APICollection/Areas/HelpPage/ModelDescriptions/EnumValueDescription.cs
+:000000 100644 0000000... 45dbc2a... A	APICollection/Areas/HelpPage/ModelDescriptions/IModelDocumentationProvider.cs
+:000000 100644 0000000... ea6cb58... A	APICollection/Areas/HelpPage/ModelDescriptions/KeyValuePairModelDescription.cs
+:000000 100644 0000000... cc51704... A	APICollection/Areas/HelpPage/ModelDescriptions/ModelDescription.cs
+:000000 100644 0000000... 229873e... A	APICollection/Areas/HelpPage/ModelDescriptions/ModelDescriptionGenerator.cs
+:000000 100644 0000000... d7ca9fe... A	APICollection/Areas/HelpPage/ModelDescriptions/ModelNameAttribute.cs
+:000000 100644 0000000... 62843bf... A	APICollection/Areas/HelpPage/ModelDescriptions/ModelNameHelper.cs
+:000000 100644 0000000... 784344e... A	APICollection/Areas/HelpPage/ModelDescriptions/ParameterAnnotation.cs
+:000000 100644 0000000... 125e8e0... A	APICollection/Areas/HelpPage/ModelDescriptions/ParameterDescription.cs
+:000000 100644 0000000... b5ab84f... A	APICollection/Areas/HelpPage/ModelDescriptions/SimpleTypeModelDescription.cs
+:000000 100644 0000000... 9c266bb... A	APICollection/Areas/HelpPage/Models/HelpPageApiModel.cs
+:000000 100644 0000000... 83601f4... A	APICollection/Areas/HelpPage/SampleGeneration/HelpPageSampleGenerator.cs
+:000000 100644 0000000... 93c12e5... A	APICollection/Areas/HelpPage/SampleGeneration/HelpPageSampleKey.cs
+:000000 100644 0000000... edd3bb3... A	APICollection/Areas/HelpPage/SampleGeneration/ImageSample.cs
+:000000 100644 0000000... 3e6c766... A	APICollection/Areas/HelpPage/SampleGeneration/InvalidSample.cs
+:000000 100644 0000000... f8c8fa2... A	APICollection/Areas/HelpPage/SampleGeneration/ObjectGenerator.cs
+:000000 100644 0000000... 52748f1... A	APICollection/Areas/HelpPage/SampleGeneration/SampleDirection.cs
+:000000 100644 0000000... c55d5b0... A	APICollection/Areas/HelpPage/SampleGeneration/TextSample.cs
+:000000 100644 0000000... 20b57db... A	APICollection/Areas/HelpPage/Views/Help/Api.cshtml
+:000000 100644 0000000... a0d8ccb... A	APICollection/Areas/HelpPage/Views/Help/DisplayTemplates/ApiGroup.cshtml
+:000000 100644 0000000... b2095f2... A	APICollection/Areas/HelpPage/Views/Help/DisplayTemplates/CollectionModelDescription.cshtml
+:000000 100644 0000000... 23013e8... A	APICollection/Areas/HelpPage/Views/Help/DisplayTemplates/ComplexTypeModelDescription.cshtml
+:000000 100644 0000000... 08f22f2... A	APICollection/Areas/HelpPage/Views/Help/DisplayTemplates/DictionaryModelDescription.cshtml
+:000000 100644 0000000... db42864... A	APICollection/Areas/HelpPage/Views/Help/DisplayTemplates/EnumTypeModelDescription.cshtml
+:000000 100644 0000000... b41e4f7... A	APICollection/Areas/HelpPage/Views/Help/DisplayTemplates/HelpPageApiModel.cshtml
+:000000 100644 0000000... 6c8537e... A	APICollection/Areas/HelpPage/Views/Help/DisplayTemplates/ImageSample.cshtml
+:000000 100644 0000000... 70db1f4... A	APICollection/Areas/HelpPage/Views/Help/DisplayTemplates/InvalidSample.cshtml
+:000000 100644 0000000... e3b655d... A	APICollection/Areas/HelpPage/Views/Help/DisplayTemplates/KeyValuePairModelDescription.cshtml
+:000000 100644 0000000... 452ecf3... A	APICollection/Areas/HelpPage/Views/Help/DisplayTemplates/ModelDescriptionLink.cshtml
+:000000 100644 0000000... 7c53cb3... A	APICollection/Areas/HelpPage/Views/Help/DisplayTemplates/Parameters.cshtml
+:000000 100644 0000000... c19596f... A	APICollection/Areas/HelpPage/Views/Help/DisplayTemplates/Samples.cshtml
+:000000 100644 0000000... 308044a... A	APICollection/Areas/HelpPage/Views/Help/DisplayTemplates/SimpleTypeModelDescription.cshtml
+:000000 100644 0000000... 1c363c2... A	APICollection/Areas/HelpPage/Views/Help/DisplayTemplates/TextSample.cshtml
+:000000 100644 0000000... 1e7ceb9... A	APICollection/Areas/HelpPage/Views/Help/Index.cshtml
+:000000 100644 0000000... 320e439... A	APICollection/Areas/HelpPage/Views/Help/ResourceModel.cshtml
+:000000 100644 0000000... 896c833... A	APICollection/Areas/HelpPage/Views/Shared/_Layout.cshtml
+:000000 100644 0000000... e946f6a... A	APICollection/Areas/HelpPage/Views/Web.config
+:000000 100644 0000000... d735b1c... A	APICollection/Areas/HelpPage/Views/_ViewStart.cshtml
+:000000 100644 0000000... 3fa5fcb... A	APICollection/Areas/HelpPage/XmlDocumentationProvider.cs
+:000000 100644 0000000... d825a52... A	APICollection/Content/Site.css
+:000000 100644 0000000... 31d8882... A	APICollection/Content/bootstrap-theme.css
+:000000 100644 0000000... d876f60... A	APICollection/Content/bootstrap-theme.css.map
+:000000 100644 0000000... 5e39401... A	APICollection/Content/bootstrap-theme.min.css
+:000000 100644 0000000... 94813e9... A	APICollection/Content/bootstrap-theme.min.css.map
+:000000 100644 0000000... 6167622... A	APICollection/Content/bootstrap.css
+:000000 100644 0000000... f010c82... A	APICollection/Content/bootstrap.css.map
+:000000 100644 0000000... ed3905e... A	APICollection/Content/bootstrap.min.css
+:000000 100644 0000000... 6c7fa40... A	APICollection/Content/bootstrap.min.css.map
+:000000 100644 0000000... cafe4b9... A	APICollection/Controllers/HomeController.cs
+:000000 100644 0000000... 2e85498... A	APICollection/Controllers/ValuesController.cs
+:000000 100644 0000000... e4c8937... A	APICollection/Dockerfile
+:000000 100644 0000000... 62673a4... A	APICollection/Global.asax
+:000000 100644 0000000... 17df9a1... A	APICollection/Global.asax.cs
+:000000 100644 0000000... 034f844... A	APICollection/Properties/AssemblyInfo.cs
+:000000 100644 0000000... 8a2e99a... A	APICollection/Scripts/bootstrap.js
+:000000 100644 0000000... 9bcd2fc... A	APICollection/Scripts/bootstrap.min.js
+:000000 100644 0000000... a88b6c6... A	APICollection/Scripts/jquery-3.3.1.intellisense.js
+:000000 100644 0000000... 9b5206b... A	APICollection/Scripts/jquery-3.3.1.js
+:000000 100644 0000000... 4d9b3a2... A	APICollection/Scripts/jquery-3.3.1.min.js
+:000000 100644 0000000... 294ee96... A	APICollection/Scripts/jquery-3.3.1.min.map
+:000000 100644 0000000... 5dae0ed... A	APICollection/Scripts/jquery-3.3.1.slim.js
+:000000 100644 0000000... f4ca9b2... A	APICollection/Scripts/jquery-3.3.1.slim.min.js
+:000000 100644 0000000... a529d88... A	APICollection/Scripts/jquery-3.3.1.slim.min.map
+:000000 100644 0000000... 3365339... A	APICollection/Scripts/modernizr-2.8.3.js
+:000000 100644 0000000... 9c34513... A	APICollection/Views/Home/Index.cshtml
+:000000 100644 0000000... 4c9a28a... A	APICollection/Views/Shared/Error.cshtml
+:000000 100644 0000000... 7b23b2f... A	APICollection/Views/Shared/_Layout.cshtml
+:000000 100644 0000000... c727345... A	APICollection/Views/Web.config
+:000000 100644 0000000... 2de6241... A	APICollection/Views/_ViewStart.cshtml
+:000000 100644 0000000... d7712aa... A	APICollection/Web.Debug.config
+:000000 100644 0000000... 28a4d5f... A	APICollection/Web.Release.config
+:000000 100644 0000000... 163d2e1... A	APICollection/Web.config
+:000000 100644 0000000... a3a7999... A	APICollection/favicon.ico
+:000000 100644 0000000... b93a495... A	APICollection/fonts/glyphicons-halflings-regular.eot
+:000000 100644 0000000... 94fb549... A	APICollection/fonts/glyphicons-halflings-regular.svg
+:000000 100644 0000000... 1413fc6... A	APICollection/fonts/glyphicons-halflings-regular.ttf
+:000000 100644 0000000... 9e61285... A	APICollection/fonts/glyphicons-halflings-regular.woff
+:000000 100644 0000000... 64539b5... A	APICollection/fonts/glyphicons-halflings-regular.woff2
+:000000 100644 0000000... da04566... A	APICollection/packages.config
+:000000 100644 0000000... a009cbc... A	docker-compose.dcproj
+:000000 100644 0000000... e66f630... A	docker-compose.override.yml
+:000000 100644 0000000... 93d1215... A	docker-compose.yml
+
+[33mcommit 6a0e6b8647918dd14397000d2dcb534ef46e8c5a[m
+Author: Avekatten <Andreaslyksen@gmail.com>
+Date:   Wed May 8 15:05:28 2019 +0200
+
+    Add .gitignore and .gitattributes.
+
+:000000 100644 0000000... 1ff0c42... A	.gitattributes
+:000000 100644 0000000... 3c4efe2... A	.gitignore

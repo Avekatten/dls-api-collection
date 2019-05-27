@@ -1,4 +1,5 @@
 ﻿using Raven.Client.Documents;
+using System.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,9 +17,10 @@ namespace LeaderboardAPI_DLS.Helpers
 
         private static IDocumentStore CreateStore()
         {
+            string ravenDBIP = ConfigurationManager.AppSettings["RavenDBEndPoint"];
             IDocumentStore store = new DocumentStore()
             {
-                Urls = new[] { "http://127.0.0.1:8080" },
+                Urls = new[] { ravenDBIP },
                 Database = "Scores"
             }.Initialize();
             

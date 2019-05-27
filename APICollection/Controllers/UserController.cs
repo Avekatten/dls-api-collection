@@ -1,6 +1,7 @@
 ﻿using APICollection.Helpers;
 using APICollection.Models;
 using Raven.Client.Documents.Session;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -101,7 +102,7 @@ namespace APICollection.Controllers
         [Route("Login")]
         public bool Login([FromBody]User user)
         {
-            using (IDocumentSession session = RavenDocumentStore.Store.OpenSession())
+                       using (IDocumentSession session = RavenDocumentStore.Store.OpenSession())
             {
                 List<User> matchingUser = session
                     .Query<User>()                               
