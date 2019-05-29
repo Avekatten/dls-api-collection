@@ -10,7 +10,7 @@ namespace LeaderboardAPI_DLS.Helpers
 {
     public class RavenDocumentStore
     {
-
+        //
         private static Lazy<IDocumentStore> store = new Lazy<IDocumentStore>(CreateStore);
 
         public static IDocumentStore Store => store.Value;
