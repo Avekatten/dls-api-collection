@@ -6,26 +6,22 @@ using Raven.Client.ServerWide.Operations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Web.Http;
 using UserAPI_DLS.Helpers;
 
 namespace APICollection.Controllers
 {
+
     [RoutePrefix("api/User")]
     public class UserController : ApiController
     {
-        // GET: api/User
-        public List<User> Get()
+
+        public bool Get()
         {
-            using (IDocumentSession session = RavenDocumentStore.Store.OpenSession())  // Open a session for a default 'Database'
-            {
-                List<User> users = session
-                .Query<User>()
-                .ToList();
-      
-                return users;
-            }
+            return false;
         }
 
         // Get specific user
