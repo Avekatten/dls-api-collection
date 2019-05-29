@@ -102,9 +102,9 @@ namespace APICollection.Controllers
         // Queries for the username and password in the DB, returns true/false
         [HttpPost]
         [Route("Login")]
-        public bool Login([FromBody]User user)
+        public HttpResponseMessage Login(HttpRequestMessage request, [FromBody]User user)
         {
-                       using (IDocumentSession session = RavenDocumentStore.Store.OpenSession())
+            using (IDocumentSession session = RavenDocumentStore.Store.OpenSession())
             {
                 EnsureDatabaseExists.DatabaseExists(RavenDocumentStore.Store, "Users");
                 List<User> matchingUser = session
@@ -114,10 +114,10 @@ namespace APICollection.Controllers
 
                 if (matchingUser.Count > 0)
                 {
-                    return true;
+                    return request.CreateResponse(HttpStatusCode.OK, user);
                 }
 
-                return false;
+                return request.CreateResponse(HttpStatusCode.Unauthorized, user);
             }
         }
     }
