@@ -35,30 +35,30 @@ namespace APICollection.Controllers
 
                 session.SaveChanges();
                 return user;
-            }     
+            }
         }
 
         // Creates a new user
         // POST: api/User
-        public bool Post([FromBody]User value)
+        public User Post([FromBody]User value)
         {
             using (IDocumentSession session = RavenDocumentStore.Store.OpenSession())  // Open a session for a default 'Database'
             {
 
                 session.Store(value);
 
-                
+
                 value.UserID = session.Advanced.GetDocumentId(value);
 
                 value.UserID = Regex.Replace(value.UserID, "[^.0-9]", "");
 
 
-                session.SaveChanges();     
-                
+                session.SaveChanges();
+
                 // Needs check for valid credentials/data
             }
 
-            return true;
+            return value;
         }
 
         // Updates a user with a given id
@@ -69,14 +69,14 @@ namespace APICollection.Controllers
             {
                 EnsureDatabaseExists.DatabaseExists(RavenDocumentStore.Store, "Users");
                 User user = session.Load<User>("users/" + id + "-A");                               // Load the Product and start tracking
-                
+
                 //session.Delete(user);
                 user.Username = value.Username;
                 user.Password = value.Password;
                 user.UserMail = value.UserMail;
                 user.OwnedGames = value.OwnedGames;
-    
-                
+
+
                 // session.set(user, username, password);
                 session.SaveChanges();
             }
@@ -108,16 +108,16 @@ namespace APICollection.Controllers
             {
                 EnsureDatabaseExists.DatabaseExists(RavenDocumentStore.Store, "Users");
                 List<User> matchingUser = session
-                    .Query<User>()                               
+                    .Query<User>()
                     .Where(x => x.Username.Equals(user.Username) && x.Password.Equals(user.Password))
                     .ToList();
 
                 if (matchingUser.Count > 0)
                 {
-                    return request.CreateResponse(HttpStatusCode.OK, user);
+                    return request.CreateResponse(HttpStatusCode.OK, matchingUser);
                 }
 
-                return request.CreateResponse(HttpStatusCode.Unauthorized, user);
+                return request.CreateResponse(HttpStatusCode.Unauthorized, matchingUser);
             }
         }
     }
